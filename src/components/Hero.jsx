@@ -2,11 +2,15 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
-import PortfolioContext from '../../context/context';
+import PortfolioContext from './context';
+import SocialLinks from './SocialLinks';
 
 const Header = () => {
-  const { hero } = useContext(PortfolioContext);
+  const { hero, footer } = useContext(PortfolioContext);
   const { title, name, subtitle, cta } = hero;
+  const { networks } = footer;
+
+  console.log('networks', networks);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -26,8 +30,7 @@ const Header = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
-            {title || 'Hi, my name is'}{' '}
-            <span className="text-color-main">{name || 'Zoe Shenqiu Zhang'}</span>
+            {title || 'I am'} <span className="text-color-main">{name || 'Zoe Shenqiu Zhang'}</span>
             <br />
             {subtitle || "I'm a Full Stack Developer."}
           </h1>
@@ -49,6 +52,9 @@ const Header = () => {
               </span>
             </p>
           </Row>
+        </Fade>
+        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
+          <SocialLinks networks={networks} />
         </Fade>
       </Container>
     </section>

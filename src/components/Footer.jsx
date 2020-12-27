@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';
-import PortfolioContext from '../../context/context';
+import SocialLinks from './SocialLinks';
+import PortfolioContext from './context';
 
 const Footer = () => {
   const { footer } = useContext(PortfolioContext);
@@ -15,23 +16,7 @@ const Footer = () => {
             <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
           </Link>
         </span>
-        <div className="social-links">
-          {networks &&
-            networks.map((network) => {
-              const { id, name, url } = network;
-              return (
-                <a
-                  key={id}
-                  href={url || 'https://github.com/Zoe-0925'}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label={name}
-                >
-                  <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
-                </a>
-              );
-            })}
-        </div>
+        <SocialLinks networks={networks} />
         <hr />
         <p className="footer__text">
           © {new Date().getFullYear()} - Template developed by{' '}

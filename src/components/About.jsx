@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
-import Title from '../Title/Title';
-import AboutImg from '../Image/AboutImg';
-import PortfolioContext from '../../context/context';
+import Title from './Title';
+import AboutImg from './Image/AboutImg';
+import PortfolioContext from './context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
