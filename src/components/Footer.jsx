@@ -16,7 +16,7 @@ const Footer = () => {
             <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
           </Link>
         </span>
-        <SocialLinks networks={networks} />
+        {networks && <SocialLinks networks={networks} />}
         <hr />
         <p className="footer__text">
           © {new Date().getFullYear()} - Template developed by{' '}

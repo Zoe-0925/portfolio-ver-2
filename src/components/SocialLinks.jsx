@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SocialLinks = ({ networks }) => (
+const SocialLinks = ({ networks = [] }) => (
   <div className="social-links">
     {networks &&
       networks.map((network) => {
@@ -22,7 +22,7 @@ const SocialLinks = ({ networks }) => (
 );
 
 SocialLinks.propTypes = {
-  networks: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  networks: PropTypes.oneOfType([PropTypes.object]),
 };
 
 export default SocialLinks;
