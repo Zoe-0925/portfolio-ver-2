@@ -12,4 +12,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments 🎁
 
-This project is built with the template of **Jacobo Martinez** [https://github.com/cobidev](https://github.com/cobidev)
+This project is built with **Jacobo Martinez**'s template - [https://github.com/cobidev](https://github.com/cobidev)

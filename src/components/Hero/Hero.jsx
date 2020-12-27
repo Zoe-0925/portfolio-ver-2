@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
@@ -27,19 +27,28 @@ const Header = () => {
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
             {title || 'Hi, my name is'}{' '}
-            <span className="text-color-main">{name || 'Your Name'}</span>
+            <span className="text-color-main">{name || 'Zoe Shenqiu Zhang'}</span>
             <br />
-            {subtitle || "I'm the Unknown Developer."}
+            {subtitle || "I'm a Full Stack Developer."}
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-          <p className="hero-cta">
-            <span className="cta-btn cta-btn--hero">
-              <Link to="about" smooth duration={1000}>
-                {cta || 'Know more'}
-              </Link>
-            </span>
-          </p>
+          <Row>
+            <p className="hero-cta">
+              <span className="cta-btn cta-btn--hero">
+                <Link to="projects" smooth duration={1000}>
+                  {cta || 'View my projects'}
+                </Link>
+              </span>
+            </p>
+            <p className="hero-cta" style={{ marginLeft: '2rem' }}>
+              <span className="cta-btn cta-btn--hero">
+                <Link to="about" smooth duration={1000}>
+                  {cta || 'View my CV'}
+                </Link>
+              </span>
+            </p>
+          </Row>
         </Fade>
       </Container>
     </section>

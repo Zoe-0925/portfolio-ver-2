@@ -67,16 +67,6 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
       url: '',
     },
@@ -88,7 +78,16 @@ export const footerData = {
   ],
 };
 
-// Github start/fork buttons
-export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
-};
+// EDUCATION DATA
+export const educationData = [
+  {
+    id: nanoid(),
+    degree: 'Master of Information Technology',
+    uni: 'Monash University',
+  },
+  {
+    id: nanoid(),
+    degree: 'Bachelor of Arts in English and American Literature',
+    uni: 'Keio University',
+  },
+];
