@@ -30,8 +30,8 @@ const Header = () => {
         <Col sm={12} md={8}>
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
             <h1 className="hero-title">
-              {title || 'I am'}{' '}
-              <span className="text-color-main">{name || 'Zoe Shenqiu Zhang'}</span>
+              {title || 'I am'}
+              <span className="text-color-main">{name || ' Zoe Zhang'}</span>
               <br />
               {subtitle || "I'm a Full Stack Developer."}
             </h1>
